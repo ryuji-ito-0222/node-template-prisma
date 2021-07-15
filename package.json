@@ -1,0 +1,34 @@
+{
+  "name": "node-template-prisma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./dist/index.js",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "dev": "nodemon --exec ts-node ./src/index.ts",
+    "prisma:migrate": "prisma migrate dev --preview-feature",
+    "prisma:generate": "prisma generate",
+    "prisma:seed": "prisma db seed --preview-feature"
+  },
+  "dependencies": {
+    "@prisma/client": "^2.27.0",
+    "fastify": "^3.19.1",
+    "fastify-cors": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.3.2",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "prisma": "^2.27.0",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
+}
